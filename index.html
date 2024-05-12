@@ -1,21 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-		<title>DSFI EMPIRE (M) SDN. BHD.</title>
-		<link rel="stylesheet" href="/dsfi.css">
-        <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1039077129582809138/1117136649298657451/dsfi-removebg-preview.png">
-        <script src="/dsfi.js"></script>
-	</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/main.css">
+    <script language="JavaScript" type="text/javascript" src="js/jquery.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/jquery-ui.js"></script>
+    <title>DSFI Empire</title>
+</head>
+<body>
+    <div class="topnav">
+        <a>Home</a>
+        <a>About</a>
+        <a>About2</a>
+        <a>Contact</a>
+    </div>
 
-    <body>
-        <img class="logo" id="logo" src="https://media.discordapp.net/attachments/1039077129582809138/1117136649298657451/dsfi-removebg-preview.png">
-        <a class="logotext">DSFI Empire</a>
-        <a class="cono">Group Of Companies</a>
-        <div class="homenav">
-            <button style="left: 10%" onclick="goto('intro')">INTRODUCTION</button>
-            <button style="left: 20%" onclick="goto('about')">ABOUT US</button>
-            <button style="left: 30%" onclick="goto('career')">CAREER</button>
-            <button style="left: 40%" onclick="goto('contact')">CONTACT US</button>
-        </div>
-    </body>
+    <img style="    display: block;
+    position: relative;
+    width: 40vw;
+    top: 20px;
+    height: 40vw;
+    left: 50%;
+    border: 0;
+    transform: translateX(-50%);
+    background-image: url(assets/dsfi-logo-glow.png);
+    background-size: cover;
+    border-radius: 400px;">
+
+    <div class="page">
+
+    </div>
+
+    <canvas id="stars" style="width: 100%;"></canvas>
+    <div id="particles-js"></div>
+    <script src="js/stars.js"></script>
+</body>
 </html>
