@@ -1,11 +1,15 @@
+::-webkit-scrollbar {
+    width: 0;
+}
+
+:root {
+    --theme-color: #ecd470;
+}
+
 * {
     padding: 0;
     border: 0;
     margin: 0;
-}
-
-html {
-    overflow: hidden;
 }
 
 body {
@@ -15,7 +19,8 @@ body {
 
 .topnav {
     display: flex;
-    position: relative;
+    position: fixed;
+    width: 100%;
     height: 65px;
     background-color: black;
     border-bottom: solid 1px rgb(10, 10, 10);
@@ -23,9 +28,39 @@ body {
 }
 .topnav a {
     padding: 20px;
-    color: #ecd470;
+    color: var(--theme-color);
     position: relative;
     font-size: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+.topnav a:hover {
+    background-color: var(--theme-color);
+    color: black;
+    transition: .2s;
+}
+
+.coname {
+    display: block;
+    position: relative;
+    color: var(--theme-color);
+    font-size: 4vw;
+    width: 100%;
+    text-align: center;
+    bottom: 2.2vw;
+    font-family: "SF Pro";
+    text-shadow: 0 0 10px var(--theme-color);
+}
+.codesc {
+    display: block;
+    position: relative;
+    color: var(--theme-color);
+    font-size: 2vw;
+    width: 100%;
+    text-align: center;
+    bottom: 2.2vw;
+    font-family: "SF Pro";
+    text-shadow: 0 0 10px var(--theme-color);
 }
 
 #stars {
@@ -49,4 +84,70 @@ body {
     position: fixed;
     top: 0px;
     z-index:-1;
+}
+
+.page {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.01);
+    border-top: solid 1px rgb(10, 10, 10);
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.pane {
+    width: 20vw;
+    height: 20vw;
+    left: 1vw;
+    top: 5vw;
+    position: relative;
+    perspective: 600px;
+  }
+  
+  .pane-tilt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: 0.1s;
+    display: flex;
+    transform-style: preserve-3d;
+    border-radius: 30px;
+  }
+  
+  .pane-tilt-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .pane-tilt-desc {
+    position: relative;
+    margin: auto;
+    color: #fff;
+    transition: 0.3s;
+    transform: translateZ(0px);
+    scale: 0.6;
+    opacity: 0;
+  }
+  
+  .pane:hover .pane-tilt-desc {
+    transform: translateZ(60px);
+    scale: 1;
+    opacity: 1;
+  }
+
+.adesc {
+    position: relative;
+    display: block;
+    left: 23vw;
+    color: white;
+    font-size: 2vw;
+    width: 75%;
+    top: -15vw;
+    text-align: justify;
 }
