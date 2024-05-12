@@ -101,9 +101,9 @@ body {
     top: 5vw;
     position: relative;
     perspective: 600px;
-  }
+}
   
-  .pane-tilt {
+.pane-tilt {
     position: relative;
     width: 100%;
     height: 100%;
@@ -112,9 +112,9 @@ body {
     display: flex;
     transform-style: preserve-3d;
     border-radius: 30px;
-  }
+}
   
-  .pane-tilt-image {
+.pane-tilt-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -123,9 +123,9 @@ body {
     object-fit: cover;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.1);
-  }
+}
   
-  .pane-tilt-desc {
+.pane-tilt-desc {
     position: relative;
     margin: auto;
     color: #fff;
@@ -133,13 +133,13 @@ body {
     transform: translateZ(0px);
     scale: 0.6;
     opacity: 0;
-  }
+}
   
-  .pane:hover .pane-tilt-desc {
+.pane:hover .pane-tilt-desc {
     transform: translateZ(60px);
     scale: 1;
     opacity: 1;
-  }
+}
 
 .adesc {
     position: relative;
@@ -151,3 +151,22 @@ body {
     top: -15vw;
     text-align: justify;
 }
+
+@media (max-width: 1024px)  { /* Detects if the screen width below n */
+    .adesc {
+        left: 1vw;
+        font-size: 4vw;
+        width: 100%;
+        top: -15vw;
+        text-align: justify;
+        margin-top: 23vw;
+    }
+    .pane {
+        width: 100%;
+        height: 80vw;
+        left: 1vw;
+        top: 5vw;
+        position: relative;
+        perspective: 600px;
+    }
+}   
