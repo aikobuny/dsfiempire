@@ -55,7 +55,7 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles
           },
           "move": {
             "enable": true,
-            "speed": 1,
+            "speed": .2,
             "direction": "none",
             "random": false,
             "straight": false,
